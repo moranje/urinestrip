@@ -51,7 +51,7 @@
     ChoiceOption,
   } from '@ditdot-dev/vue-flow-form';
   import AdvicePage from './AdvicePage.vue';
-  import data from './data.js';
+  import { uti } from './data.js';
 
   export default {
     name: 'FormMain',
@@ -281,12 +281,17 @@
         }
       },
 
-      onAnswer(question) {
-        const [_, tissueInvasion, riskAssessment, __, antibiotics] =
-          this.questions;
+      onAnswer(question: any) {
+        const [
+          _,
+          tissueInvasion,
+          riskAssessment,
+          __,
+          antibiotics,
+        ] = this.questions;
 
         if (question.id === 'urinaryCatheter') {
-          this.questions[4].options = data.uti[tissueInvasion.model][
+          this.questions[4].options = uti[tissueInvasion.model][
             riskAssessment.model
           ].antibiotics.map((antibiotic: string) => {
             let name = antibiotic.split(',')[0];
@@ -299,9 +304,8 @@
         }
 
         if (question.id === 'antibiotics') {
-          this.advice =
-            data.uti[tissueInvasion.model][riskAssessment.model].advice;
-          this.docs = data.uti[tissueInvasion.model][
+          this.advice = uti[tissueInvasion.model][riskAssessment.model].advice;
+          this.docs = uti[tissueInvasion.model][
             riskAssessment.model
           ].docs.replace('<treatment>', antibiotics.model);
         }
