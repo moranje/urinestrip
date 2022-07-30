@@ -35,4 +35,16 @@
   header.vff-header.logo {
     padding: 0.2em 0;
   }
+
+  @media screen and (min-width: 1024px) {
+    header.vff-header.logo {
+      padding: 0.2em 5.5%;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    header.vff-header.logo {
+      padding: 0.2em 10%;
+    }
+  }
 </style>

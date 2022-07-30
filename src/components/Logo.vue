@@ -4,7 +4,7 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     width="200"
     zoomAndPan="magnify"
-    viewBox="0 0 150 37.5"
+    viewBox="5 0 150 37.5"
     height="50"
     preserveAspectRatio="xMidYMid meet"
     version="1.0"
