@@ -29,7 +29,7 @@
                     <a href="https://www.linkedin.com/in/martienoranje/">
                       <img
                         class="about-image"
-                        src="https://media-exp1.licdn.com/dms/image/C4D03AQHNxuv05XthiA/profile-displayphoto-shrink_100_100/0/1517608294451?e=1664409600&amp;v=beta&amp;t=qEpF33cFUj_x1ezER7kzOsnjFfnFBkNqNo1KW4eWjoA"
+                        src="../assets/user-image.jpeg"
                         alt="Martien Oranje"
                       />
                     </a>
@@ -62,6 +62,8 @@
   .side-column img.about-image {
     border-radius: 50%;
     margin-bottom: 0;
+    width: 100px;
+    height: 100px;
   }
 
   .side-column img.about-image:hover {

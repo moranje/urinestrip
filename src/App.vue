@@ -7,7 +7,7 @@
           <img
             @click.prevent="navigateAbout"
             width="36"
-            src="https://media-exp1.licdn.com/dms/image/C4D03AQHNxuv05XthiA/profile-displayphoto-shrink_100_100/0/1517608294451?e=1664409600&amp;v=beta&amp;t=qEpF33cFUj_x1ezER7kzOsnjFfnFBkNqNo1KW4eWjoA"
+            src="./assets/user-image.jpeg"
             height="36"
             alt="Martien Oranje"
             class="about-image"
