@@ -110,28 +110,38 @@
         questions: [
           {
             type: 'multiplechoice',
-            id: 'conclusiveTest',
-            title: 'Nitriet',
+            id: 'test',
+            title: 'Test uitslag',
             multiple: false,
             nextStepOnAnswer: true,
             required: true,
             jump: {
-              pos: 'tissueInvasion',
+              nitrite: 'tissueInvasion',
               urineCulture: 'tissueInvasion',
-              neg: 'leukocytes',
+              leukocytes: 'leukocytes',
+              blood: 'blood',
+              other: 'other',
             },
             options: [
               {
-                label: 'Positief',
-                value: 'pos',
+                label: 'Nitriet positief',
+                value: 'nitrite',
               },
               {
                 label: 'Dipslide, sediment of kweek positief',
                 value: 'urineCulture',
               },
               {
-                label: 'Negatief',
-                value: 'neg',
+                label: 'Leukocyten',
+                value: 'leukocytes',
+              },
+              {
+                label: 'Bloed',
+                value: 'blood',
+              },
+              {
+                label: 'Overig',
+                value: 'other',
               },
             ],
             model: {},

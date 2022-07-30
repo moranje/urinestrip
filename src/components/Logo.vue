@@ -1,5 +1,7 @@
 <template>
   <svg
+    @click="reloadPage"
+    class="svg"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     width="200"
@@ -285,3 +287,20 @@ L 4 -3.25 C 4.164062 -2.769531 4.5625 -2.53125 5.1875 -2.53125 Z M 5.1875
     </g>
   </svg>
 </template>
+
+<script lang="ts">
+  export default {
+    methods: {
+      reloadPage() {
+        window.location.reload();
+      },
+    },
+  };
+</script>
+
+<style>
+  .svg:hover {
+    filter: invert(0) sepia(1) saturate(6) hue-rotate(0deg) brightness(1)
+      drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+  }
+</style>
