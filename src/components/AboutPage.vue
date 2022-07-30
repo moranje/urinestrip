@@ -10,7 +10,7 @@
               <span class="f-text"
                 >Over deze website&nbsp;
                 <span class="f-sub">
-                  <span class="f-help"
+                  <span class="f-help about-text"
                     >Ik heb deze website gemaakt omdat de afwegingen bij
                     urineonderzoek, hoewel protocolair, best veel kunnen zijn om
                     te onthouden. De website is gebaseerd op de
@@ -50,7 +50,7 @@
 </template>
 
 <style>
-  .f-help {
+  .about-text {
     width: calc(100% - 120px);
     float: left;
   }
