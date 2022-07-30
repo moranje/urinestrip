@@ -2,7 +2,6 @@
   <div>
     <header class="vff-header logo">
       <div class="f-container">
-        <!-- Add custom logo here -->
         <logo />
       </div>
     </header>
@@ -34,6 +33,6 @@
   @import './../node_modules/@ditdot-dev/vue-flow-form/dist/vue-flow-form.theme-purple.css';
 
   header.vff-header.logo {
-    padding: 0em 10% 0.2em;
+    padding: 0.2em 0;
   }
 </style>
