@@ -281,6 +281,18 @@
             nextStepOnAnswer: true,
             required: true,
             jump: () => {
+              const answer = this.questions[5].model;
+
+              this.advice =
+                'Omdat een deel van urineweginfecties gemist wordt met alleen de nitriet test (iets meer dan 20%) wordt bij positieve leukocyten aanvullende diagnostiek geadviseerd.';
+              this.docs = `Vooralsnog geen urineweginfectie aan kunnen tonen, omdat er wel witte bloedcellen werden gevonden wordt aanvullend nog een ${
+                answer === 'dipslide'
+                  ? 'dipslide'
+                  : answer === 'urineSediment'
+                  ? 'urinesediment'
+                  : 'urinekweek'
+              } gedaan. Mocht hierbij een bacterie gevonden worden dan kan behandeling nodig zijn.`;
+
               return '_submit';
             },
             options: [
