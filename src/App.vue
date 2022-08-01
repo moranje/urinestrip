@@ -21,7 +21,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
   import Logo from './components/Logo.vue';
   import FormMain from './components/FormMain.vue';
   import AboutPage from './components/AboutPage.vue';

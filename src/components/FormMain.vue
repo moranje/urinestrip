@@ -43,7 +43,7 @@
   </flow-form>
 </template>
 
-<script lang="ts">
+<script>
   import {
     FlowForm,
     LanguageModel,
@@ -101,8 +101,8 @@
         }),
 
         advice:
-          'Leg uit dat een cystitis veel voorkomt, niet besmettelijk is, maar kan terugkomen. Het betreft een hinderlijke, in principe onschuldige aandoening, die spontaan binnen 1 week kan genezen.\nMet antibiotische behandeling zijn de klachten doorgaans eerder verdwenen. Klachten kunnen tot enkele dagen na afloop van de behandeling blijven bestaan. Antibioticagebruik kan echter leiden tot bijwerkingen en antibioticaresistentie.\nLaat de patiënt bij verergering van de klachten (koorts, algemeen ziek-zijn) direct contact opnemen met de (dienstdoende) huisarts.',
-        docs: 'Uitleg gegeven over behandelopties.',
+          'De combinatie van negatieve uitslag van de nitriettest en de leukotest maakt de kans op een urineweginfectie klein. Indien ook ggen bloed in de urine wordt gevonden zijn er geen protocollaire vervolgstappen. Afwijkende waarden kunnen in bepaalde gevallen weldegelijk van betekenis zijn (glucosurie bij een niet-diabeet) maar moeten op individuele basis afgewogen worden.',
+        docs: 'Urineweginfectie met voldoende zekerheid uitgesloten.',
 
         completed: false,
         copied: false,
@@ -120,7 +120,7 @@
               urineCulture: 'tissueInvasion',
               leukocytes: 'leukocytes',
               blood: 'blood',
-              other: 'other',
+              other: '_submit',
             },
             options: [
               {
@@ -267,10 +267,126 @@
             multiple: false,
             nextStepOnAnswer: true,
             required: true,
-            jump: {
-              _other: '_submit',
+            jump: () => {
+              return '_submit';
             },
             options: [],
+            model: {},
+          },
+          {
+            type: 'multiplechoice',
+            id: 'leukocytes',
+            title: 'Welke vervolgonderzoek krijgt patiënt?',
+            multiple: false,
+            nextStepOnAnswer: true,
+            required: true,
+            jump: () => {
+              return '_submit';
+            },
+            options: [
+              {
+                label: 'Dipslide',
+                value: 'dipslide',
+              },
+              {
+                label: 'Urinesediment (vanaf 12 jaar)',
+                value: 'urineSediment',
+              },
+              {
+                label: 'Kweek',
+                value: 'urineCulture',
+              },
+            ],
+            model: {},
+          },
+          {
+            type: 'multiplechoice',
+            id: 'blood',
+            title: 'Is daarbij sprake van',
+            multiple: false,
+            nextStepOnAnswer: true,
+            required: true,
+            jump: () => {
+              const answer = this.questions[6].model;
+
+              if (answer === 'visibleHematuria') {
+                this.advice =
+                  'Plan een afspraak op het spreekuur in. Macroscopische hematurie die niet wordt verklaard door menstruatie, myoglobinurie na extreme inspanning, een urineweginfectie of nierstenen is een alarmsymptoom en verdiend aanvullend onderzoek naar onderliggende oorzaak. Zie https://www.henw.org/artikelen/microscopisch-erytrocytenverlies-de-urine';
+                this.docs = 'Afspraak op spreekuur ingepland.';
+
+                return '_submit';
+              } else if (answer === 'proteinuria') {
+                this.advice =
+                  'Urinescreening met urinestrip is veelal positief vanaf een eiwit(albumine)concentratie van ongeveer 100-300 mg/l. Een positieve urinestrip voor eiwit samen met hematurie rechtvaardigt dan ook een nefrologische analyse. Instrueer de patiënt dat een urinemonster zo snel mogelijk na verzamelen bij het laboratorium moet worden ingeleverd (liefst ter plaatse). Gebruik de tweede, midstraal, ochtendurine (een verzameling van twee tot vier uur na lozing van de eerste ochtendurine) voor onderzoek. Omdat dit monster geconcentreerd en zuur is, zijn de erytrocyten beter te behouden. Maar het langdurige overnachtverblijf in de blaas vergroot de kans op afbraak.';
+                this.docs =
+                  'Bloedonderzoek op kreatinine/eGFR, nuchter glucose\nUrine: sediment (vraagstelling: Erytrocyten? Percentage dysmorfe erytrocyten, (inclusief acanthocyten) en (indien aanwezig) percentage acanthocyten ten opzichte van het totaal aantal erytrocyten? Aanwezigheid en aard van cilinders?) en mate van proteïnurie (albumine, kreatinine en ACR)\nBloeddrukmeting\nNa onderzoeken op korte termijn afspraak op spreekuur';
+
+                return '_submit';
+              }
+
+              return 'invisiableHematuria';
+            },
+            options: [
+              {
+                // Afspraak op SU
+                label: 'Zichtbaar bloed in het monster',
+                value: 'visibleHematuria',
+              },
+              {
+                // Afspraak op SU
+                label: 'Patiënt vertelt bloed bij de urine te zien',
+                value: 'visibleHematuria',
+              },
+              {
+                // Direct sediment
+                label: 'Proteinurie',
+                value: 'proteinuria',
+              },
+              {
+                label: 'Geen van deze',
+                value: 'none',
+              },
+            ],
+            model: {},
+          },
+          {
+            type: 'multiplechoice',
+            id: 'invisiableHematuria',
+            title: 'Bloed op de urinestrip',
+            multiple: false,
+            nextStepOnAnswer: true,
+            required: true,
+            jump: () => {
+              const answer = this.questions[5].model;
+              this.advice =
+                'Het vinden van erytrocyten in de urine is niet altijd een teken van een onderliggend lijden (de sensitiviteit van de urinesticktest voor erytrocyten is 91,6%, de specificiteit is 56,9%. De lage specificiteit maakt dat een positieve urinesticktest geen garantie biedt op erytrocyten in de urine). Als de urinesticktest positief is bij een patiënt zonder klachten of met klachten zonder duidelijke oorzaak, luidt het advies om de test na 1 week te herhalen en dan nogmaals als de tweede test negatief is. Als 2 urinesticktests binnen enkele weken een positieve uitslag geven, mag men spreken van ‘persisterend erytrocytenverlies in de urine’. Foutpositieve testuitslagen ontstaan door myoglobinurie, forse bacteriurie, oxiderende schoonmaakmiddelen bij het reinigen van verzamelpotjes en contaminatie met bijvoorbeeld menstruatiebloed of bloed uit rectum of colon. Foutnegatieve resultaten ontstaan door hoge concentraties eiwit (> 5 g/l), vitamine C of nitriet (> 2,5 mmol/l), en conserveermiddelen (formaline).';
+
+              if (answer === 'first' || answer === 'second') {
+                this.docs =
+                  'Over 1 week controle op bloed via een urineonderzoek. Instructies: enkele dagen vóór het onderzoek niet intensief te sporten, de urine niet te verzamelen tijdens een menstruatie en een schoon verzamelpotje te gebruiken. Bij nieuwe symptomen contact. Indien bij controle geen bloed in de urine geen verdere controle.';
+
+                return '_submit';
+              }
+
+              this.docs =
+                'Afspraak op het spreekuur ingepland voor verdere inventarisatie hematurie (glomerulair of urinewegen/blaas).';
+
+              return '_submit';
+            },
+            options: [
+              {
+                label: '1e keer bloed bij de urinestrip',
+                value: 'first',
+              },
+              {
+                label: '2e keer geen bloed bij de urinestrip',
+                value: 'second',
+              },
+              {
+                label: 'Bloed op 2 van de max. 3 testen',
+                value: 'final',
+              },
+            ],
             model: {},
           },
         ],
@@ -291,7 +407,7 @@
         }
       },
 
-      onAnswer(question: any) {
+      onAnswer(question) {
         const [
           _,
           tissueInvasion,
@@ -303,7 +419,7 @@
         if (question.id === 'urinaryCatheter') {
           this.questions[4].options = uti[tissueInvasion.model][
             riskAssessment.model
-          ].antibiotics.map((antibiotic: string) => {
+          ].antibiotics.map((antibiotic) => {
             let name = antibiotic.split(',')[0];
 
             return new ChoiceOption({
@@ -322,13 +438,7 @@
       },
 
       onComplete(completed, questionList) {
-        // This method is called whenever the "completed" status is changed.
         this.completed = completed;
-        console.log('oncomplete');
-      },
-
-      emitEnter() {
-        console.log('Emit enter');
       },
 
       copy() {

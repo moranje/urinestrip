@@ -17,6 +17,15 @@
                     <a
                       href="https://richtlijnen.nhg.org/standaarden/urineweginfecties#volledige-tekst"
                       >NHG-standaard Urineweginfecties</a
+                    >, de
+                    <a
+                      href="https://www.nvkc.nl/kwaliteit/richtlijnen/normen-en-richtlijnen"
+                      >NVKC richtlijn Eenduidige en accurate
+                      laboratoriumdiagnostiek bij hematurie</a
+                    >, een artikel in de H&W
+                    <a
+                      href="https://www.henw.org/artikelen/microscopisch-erytrocytenverlies-de-urine"
+                      >Microscopisch erytrocytenverlies in de urine</a
                     >
                     en de
                     <a
@@ -55,9 +64,9 @@
     float: left;
   }
 
-  .side-column {
-    /* width: 120px;÷ */
-  }
+  /* .side-column {
+    width: 120px;
+  } */
 
   .side-column img.about-image {
     border-radius: 50%;
