@@ -14,6 +14,10 @@
       >
     </p>
 
+    <p v-if="contraIndications !== ''">
+      <span class="text-alert">{{ contraIndications }}</span>
+    </p>
+
     <p>
       <span class="fh3">Documentatie</span>
     </p>
@@ -21,7 +25,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
   export default {
     props: {
       advice: {
@@ -30,6 +34,11 @@
       },
 
       docs: {
+        type: String,
+        default: '',
+      },
+
+      contraIndications: {
         type: String,
         default: '',
       },
