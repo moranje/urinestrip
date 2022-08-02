@@ -451,12 +451,18 @@
         if (question.id === 'urinaryCatheter') {
           this.questions[4].options = uti[tissueInvasion.model][
             riskAssessment.model
-          ].antibiotics.map((antibiotic) => {
+          ].antibiotics.description.map((antibiotic, index) => {
             let name = antibiotic.split(',')[0];
 
             return new ChoiceOption({
               label: name,
-              value: antibiotic,
+              value: {
+                description: antibiotic,
+                contraIndications: (this.questions[4].options =
+                  uti[tissueInvasion.model][
+                    riskAssessment.model
+                  ].antibiotics.contraIndications[index]),
+              },
             });
           });
         }
@@ -465,7 +471,8 @@
           this.advice = uti[tissueInvasion.model][riskAssessment.model].advice;
           this.docs = uti[tissueInvasion.model][
             riskAssessment.model
-          ].docs.replace('<treatment>', antibiotics.model);
+          ].docs.replace('<treatment>', antibiotics.model.description);
+          this.contraIndications = antibiotics.model.contraIndications;
         }
       },
 
