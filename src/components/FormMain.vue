@@ -10,6 +10,7 @@
         :advice="advice"
         :docs="docs"
         :contra-indications="contraIndications"
+        :type="adviceType"
       />
     </template>
 
@@ -106,6 +107,7 @@
 
         advice:
           'De combinatie van negatieve uitslag van de nitriettest en de leukotest maakt de kans op een urineweginfectie klein. Indien ook geen bloed in de urine wordt gevonden zijn er geen protocollaire vervolgstappen. Afwijkende waarden kunnen in bepaalde gevallen weldegelijk van betekenis zijn (glucosurie bij een niet-diabeet) maar moeten op individuele basis afgewogen worden.',
+        adviceType: 'uti',
         docs: 'Urineweginfectie met voldoende zekerheid uitgesloten.',
         contraIndications: null,
 
@@ -128,6 +130,8 @@
                 blood: 'blood',
               };
               const answer = this.questions[0].model;
+
+              if (answer === 'blood') this.adviceType = 'hematuria';
 
               if (goTo[answer]) return goTo[answer];
 

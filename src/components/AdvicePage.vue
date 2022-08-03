@@ -5,12 +5,27 @@
       <span class="f-section-text">
         {{ advice }}
       </span>
-      <div
+      <div v-if="type === 'uti'"
         >Bron: <a
           class="text-success"
           href="https://richtlijnen.nhg.org/standaarden/urineweginfecties#volledige-tekst-richtlijnen-beleid-bij-cystitis"
           >NHG-Standaard Urineweginfecties</a
         ></div
+      >
+      <div v-if="type === 'hematuria'"
+        >Bronnen:  <a class="text-success"
+                      href="https://www.nvkc.nl/kwaliteit/richtlijnen/normen-en-richtlijnen"
+                      >NVKC richtlijn Eenduidige en accurate
+                      laboratoriumdiagnostiek bij hematurie</a
+                    >, een artikel in de H&W
+                    <a class="text-success"
+                      href="https://www.henw.org/artikelen/microscopisch-erytrocytenverlies-de-urine"
+                      >Microscopisch erytrocytenverlies in de urine</a
+                    >
+                    en de
+                    <a class="text-success"
+                      href="https://www.nvu.nl/kwaliteitsbeleid/richtlijnen/actuele-richtlijnen/"
+                      >NVU richtlijn Hematurie</a></div
       >
     </p>
 
@@ -42,6 +57,11 @@
         type: String,
         default: '',
       },
+
+      type: {
+        type: String,
+        default: 'uti',
+      }
     },
   };
 </script>
