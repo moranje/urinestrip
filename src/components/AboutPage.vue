@@ -45,12 +45,12 @@
                   </span>
                 </span>
               </span>
-              <div class="about-name">
-                <a href="https://www.linkedin.com/in/martienoranje/"
-                  >Martien Oranje, huisarts</a
-                >
-              </div>
             </div>
+            <p class="about-name">
+              <a href="https://www.linkedin.com/in/martienoranje/"
+                >Martien Oranje, huisarts</a
+              >
+            </p>
           </div>
         </div>
       </div>
@@ -79,11 +79,12 @@
     filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
   }
 
-  div.about-name {
+  p.about-name {
+    clear: left;
     overflow: auto;
-    font-size: medium;
     font-style: italic;
     font-weight: 400;
     text-transform: uppercase;
+    padding-top: 12px;
   }
 </style>
