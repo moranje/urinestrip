@@ -1,4 +1,15 @@
-export const uti = {
+export const uti: {
+  [key: string]: {
+    [key: string]: {
+      antibiotics: {
+        description: string[];
+        contraIndications: string[];
+      };
+      advice: string;
+      docs: string;
+    };
+  };
+} = {
   local: {
     healthy: {
       antibiotics: {
@@ -17,8 +28,7 @@ export const uti = {
       },
       advice:
         'Leg uit dat een cystitis veel voorkomt, niet besmettelijk is, maar kan terugkomen. Het betreft een hinderlijke, in principe onschuldige aandoening, die spontaan binnen 1 week kan genezen.\nMet antibiotische behandeling zijn de klachten doorgaans eerder verdwenen. Klachten kunnen tot enkele dagen na afloop van de behandeling blijven bestaan. Antibioticagebruik kan echter leiden tot bijwerkingen en antibioticaresistentie.\nLaat de patiënt bij verergering van de klachten (koorts, algemeen ziek-zijn) direct contact opnemen met de (dienstdoende) huisarts. Controle van de urine is niet nodig indien de klachten, al dan niet met antibiotische behandeling, verdwijnen. Verricht, wanneer de klachten bij behandeling met alleen pijnstilling langer dan een week aanhouden, opnieuw urineonderzoek en start bij een persisterende infectie antibiotische behandeling. Verricht, wanneer de klachten 24 tot 48 uur na afloop van een antibioticumkuur niet duidelijk zijn afgenomen, opnieuw urineonderzoek en verstrek, indien aangewezen, een ander antibioticum dan het eerst gegeven middel. Ook bij afdoende behandeling kunnen klachten tot enkele dagen na behandeling blijven bestaan.',
-      docs:
-        '<treatment>. Contact bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking. Controle van de urine is niet nodig indien de klachten, al dan niet met antibiotische behandeling, verdwijnen.',
+      docs: '<treatment>. Contact bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
     },
     vulnerable: {
       antibiotics: {
@@ -35,8 +45,7 @@ export const uti = {
       },
       advice:
         'Leg uit dat een urineweginfectie ernstig kan verlopen en een antibioticum noodzakelijk is. Adviseer ruime vochtinname. Laat de patiënt bij verergering van de klachten (koorts, algemeen ziek-zijn) direct contact opnemen met de (dienstdoende) huisarts',
-      docs:
-        '<treatment>. Urine op kweek (behalve bij verder gezonde vrouwen met DM), graag contact over uitslag. Opnieuw controle van urine (met urinestrip) is niet nodig indien de klachten na de kuur verdwijnen. Contact bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
+      docs: '<treatment>. Urine op kweek (behalve bij verder gezonde vrouwen met DM), graag contact over uitslag. Contact bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
     },
     pregnant: {
       antibiotics: {
@@ -51,8 +60,7 @@ export const uti = {
       },
       advice:
         'Leg uit dat een urineweginfectie ernstig kan verlopen en een antibioticum noodzakelijk is. Adviseer ruime vochtinname. Laat de patiënt bij verergering van de klachten (koorts, algemeen ziek-zijn) direct contact opnemen met de (dienstdoende) huisarts. Vraag zwangeren contact op te nemen over de uitslag van de kweek vanwege de mogelijke consequenties van de uitslag voor de bevalling',
-      docs:
-        '<treatment>. Urine op kweek (ook om groep-B-streptokokken (GBS) uit te sluiten), graag contact over uitslag. Opnieuw controle van urine (met urinestrip) is niet nodig indien de klachten na de kuur verdwijnen. Contact bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
+      docs: '<treatment>. Urine op kweek (ook om groep-B-streptokokken (GBS) uit te sluiten), graag contact over uitslag. Contact bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
     },
     cadWoman: {
       antibiotics: {
@@ -61,8 +69,7 @@ export const uti = {
       },
       advice:
         'Behandeling van asymptomatische bacteriurie wordt in alle patiëntgroepen, met uitzondering van zwangeren, afgeraden',
-      docs:
-        'Behandeling is niet nodig in afwezigheid van tekenen van weefselinvasie (koorts, algehele malaise, (koude) rillingen, flank- of perineumpijn, een delier)',
+      docs: 'Behandeling is niet nodig in afwezigheid van tekenen van weefselinvasie (koorts, algehele malaise, (koude) rillingen, flank- of perineumpijn, een delier)',
     },
     men: {
       antibiotics: {
@@ -77,8 +84,7 @@ export const uti = {
       },
       advice:
         'Mannen lopen een groter risico op complicaties. Leg uit dat een urineweginfectie ernstig kan verlopen en een antibioticum noodzakelijk is. Adviseer ruime vochtinname. Laat de patiënt bij verergering van de klachten (koorts, algemeen ziek-zijn) direct contact opnemen met de (dienstdoende) huisarts. Verricht, wanneer de klachten 24 tot 48 uur na afloop van de antibioticumkuur niet duidelijk zijn afgenomen, opnieuw urineonderzoek en verstrek, indien aangewezen, een alternatief middel',
-      docs:
-        '<treatment>. Urine op kweek, graag contact over uitslag. Opnieuw controle van urine (met urinestrip) is niet nodig indien de klachten na de kuur verdwijnen. Contact bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
+      docs: '<treatment>. Urine op kweek, graag contact over uitslag. Contact bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
     },
     cadMen: {
       antibiotics: {
@@ -87,8 +93,7 @@ export const uti = {
       },
       advice:
         'Behandeling van asymptomatische bacteriurie wordt in alle patiëntgroepen, met uitzondering van zwangeren, afgeraden',
-      docs:
-        'Behandeling is niet nodig in afwezigheid van tekenen van weefselinvasie (koorts, algehele malaise, (koude) rillingen, flank- of perineumpijn, een delier)',
+      docs: 'Behandeling is niet nodig in afwezigheid van tekenen van weefselinvasie (koorts, algehele malaise, (koude) rillingen, flank- of perineumpijn, een delier)',
     },
     children: {
       antibiotics: {
@@ -103,8 +108,7 @@ export const uti = {
       },
       advice:
         'Leg uit dat een urineweginfectie ernstig kan verlopen en een antibioticum noodzakelijk is. Adviseer ruime vochtinname. Laat de patiënt bij verergering van de klachten (koorts, algemeen ziek-zijn) direct contact opnemen met de (dienstdoende) huisarts.  Geef ouders van kinderen met een urineweginfectie die zindelijk zijn of > 5 jaar uitleg over de werking van de bekkenbodem en vertel dat ontspanning nodig is voor volledige lediging van blaas en darmen.',
-      docs:
-        '<treatment>. Urine op kweek bij kinderen < 12 jaar, graag contact over uitslag. Opnieuw controle van urine (met urinestrip) is niet nodig indien de klachten na de kuur verdwijnen. Contact bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking. Indien binnen 48 uur geen verbetering overweeg verwijzing naar kinderarts.',
+      docs: '<treatment>. Urine op kweek bij kinderen < 12 jaar, graag contact over uitslag. Contact bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking. Indien binnen 48 uur geen verbetering overweeg verwijzing naar kinderarts.',
     },
   },
   tissueInvasion: {
@@ -122,9 +126,8 @@ export const uti = {
         ],
       },
       advice:
-        'Leg uit dat een urineweginfectie ernstig kan verlopen en een antibioticum noodzakelijk is. Adviseer ruime vochtinname. Instrueer de patiënt contact op te nemen indien < 48 uur geen verbetering optreedt, of eerder bij verergering van het ziektebeeld of zich ontwikkelende verwardheid. Overweeg indien uit de kweek blijkt dat de verwekker gevoelig is voor amoxicilline, amoxicilline/clavulaanzuur of cotrimoxazol het eerder gestarte ciprofloxacine te stoppen. Dit beleid vermindert het risico op bijwerkingen en op resistentie-ontwikkeling. Vooral ciprofloxacine kent een risico op ernstige bijwerkingen (switch naar: 1e keus: amoxicilline 3 dd 500 mg. 2e keus amoxicilline/clavulaanzuur 3 dd 500/125 mg of cotrimoxazol 2 dd 960 mg)',
-      docs:
-        '<treatment>. Urine op kweek, graag contact over uitslag. Opnieuw controle van urine (met urinestrip) is niet nodig indien de klachten na de kuur verdwijnen. Contact indien na 48 uur geen vebetering of verergering optreedt en bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
+        'Leg uit dat een urineweginfectie ernstig kan verlopen en een antibioticum noodzakelijk is. Adviseer ruime vochtinname. Instrueer de patiënt contact op te nemen indien < 48 uur geen verbetering optreedt, of eerder bij verergering van het ziektebeeld of zich ontwikkelende verwardheid. Stops, als uit de kweek blijkt dat de verwekker gevoelig is voor amoxicilline, amoxicilline/clavulaanzuur of cotrimoxazol het eerder gestarte ciprofloxacine en vul de kuur aan met het alternatief. Vooral ciprofloxacine kent een risico op ernstige bijwerkingen.',
+      docs: '<treatment>. Urine op kweek, graag contact over uitslag. Contact indien na 48 uur geen vebetering of verergering optreedt en bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
     },
     vulnerable: {
       antibiotics: {
@@ -141,8 +144,7 @@ export const uti = {
       },
       advice:
         'Leg uit dat een urineweginfectie ernstig kan verlopen en een antibioticum noodzakelijk is. Adviseer ruime vochtinname. Instrueer de patiënt contact op te nemen indien < 48 uur geen verbetering optreedt, of eerder bij verergering van het ziektebeeld of zich ontwikkelende verwardheid. Overweeg indien uit de kweek blijkt dat de verwekker gevoelig is voor amoxicilline, amoxicilline/clavulaanzuur of cotrimoxazol het eerder gestarte ciprofloxacine te stoppen. Dit beleid vermindert het risico op bijwerkingen en op resistentie-ontwikkeling. Vooral ciprofloxacine kent een risico op ernstige bijwerkingen (switch naar: 1e keus: amoxicilline 3 dd 500 mg. 2e keus amoxicilline/clavulaanzuur 3 dd 500/125 mg of cotrimoxazol 2 dd 960 mg)',
-      docs:
-        '<treatment>. Urine op kweek, graag contact over uitslag. Opnieuw controle van urine (met urinestrip) is niet nodig indien de klachten na de kuur verdwijnen. Contact indien na 48 uur geen vebetering of verergering optreedt en bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
+      docs: '<treatment>. Urine op kweek, graag contact over uitslag. Contact indien na 48 uur geen vebetering of verergering optreedt en bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
     },
     pregnant: {
       antibiotics: {
@@ -168,8 +170,7 @@ export const uti = {
       },
       advice:
         'Leg uit dat een urineweginfectie ernstig kan verlopen en een antibioticum noodzakelijk is. Adviseer ruime vochtinname. Instrueer de patiënt contact op te nemen indien < 48 uur geen verbetering optreedt, of eerder bij verergering van het ziektebeeld of zich ontwikkelende verwardheid. Overweeg indien uit de kweek blijkt dat de verwekker gevoelig is voor amoxicilline, amoxicilline/clavulaanzuur of cotrimoxazol het eerder gestarte ciprofloxacine te stoppen. Dit beleid vermindert het risico op bijwerkingen en op resistentie-ontwikkeling. Vooral ciprofloxacine kent een risico op ernstige bijwerkingen (switch naar: 1e keus: amoxicilline 3 dd 500 mg. 2e keus amoxicilline/clavulaanzuur 3 dd 500/125 mg of cotrimoxazol 2 dd 960 mg)',
-      docs:
-        '<treatment>. Urine op kweek, graag contact over uitslag. Opnieuw controle van urine (met urinestrip) is niet nodig indien de klachten na de kuur verdwijnen. Contact indien na 48 uur geen vebetering of verergering optreedt en bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
+      docs: '<treatment>. Urine op kweek, graag contact over uitslag. Contact indien na 48 uur geen vebetering of verergering optreedt en bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
     },
     men: {
       antibiotics: {
@@ -185,9 +186,8 @@ export const uti = {
         ],
       },
       advice:
-        'Leg uit dat een urineweginfectie ernstig kan verlopen en een antibioticum noodzakelijk is. Adviseer ruime vochtinname. Instrueer de patiënt contact op te nemen indien < 48 uur geen verbetering optreedt, of eerder bij verergering van het ziektebeeld of zich ontwikkelende verwardheid. Overweeg indien uit de kweek blijkt dat de verwekker gevoelig is voor amoxicilline, amoxicilline/clavulaanzuur of cotrimoxazol het eerder gestarte ciprofloxacine te stoppen. Dit beleid vermindert het risico op bijwerkingen en op resistentie-ontwikkeling. Vooral ciprofloxacine kent een risico op ernstige bijwerkingen (switch naar: 1e keus: amoxicilline 3 dd 500 mg. 2e keus amoxicilline/clavulaanzuur 3 dd 500/125 mg of cotrimoxazol 2 dd 960 mg)',
-      docs:
-        '<treatment>. Urine op kweek, graag contact over uitslag. Opnieuw controle van urine (met urinestrip) is niet nodig indien de klachten na de kuur verdwijnen. Contact indien na 48 uur geen vebetering of verergering optreedt en bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
+        'Leg uit dat een urineweginfectie ernstig kan verlopen en een antibioticum noodzakelijk is. Adviseer ruime vochtinname. Instrueer de patiënt contact op te nemen indien < 48 uur geen verbetering optreedt, of eerder bij verergering van het ziektebeeld of zich ontwikkelende verwardheid. Als uit de kweek blijkt dat de verwekker gevoelig is voor cotrimoxazol, te starten met cotrimoxazol 2 dd 960 mg voor de resterende dagen van de originele kuur. Cotrimoxazol is gecontra-indiceerd bij gebruik van cumarine of methotrexaat en bij ernstige lever- en nierfunctiestoornissen, ernstige afwijkingen in het bloedbeeld of acute porfyrie. Ciprofloxacine kent een risico op ernstige bijwerkingen.',
+      docs: '<treatment>. Urine op kweek, graag contact over uitslag. Contact indien na 48 uur geen vebetering of verergering optreedt en bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
     },
     cadMen: {
       antibiotics: {
@@ -204,8 +204,7 @@ export const uti = {
       },
       advice:
         'Leg uit dat een urineweginfectie ernstig kan verlopen en een antibioticum noodzakelijk is. Adviseer ruime vochtinname. Instrueer de patiënt contact op te nemen indien < 48 uur geen verbetering optreedt, of eerder bij verergering van het ziektebeeld of zich ontwikkelende verwardheid. Overweeg indien uit de kweek blijkt dat de verwekker gevoelig is voor amoxicilline, amoxicilline/clavulaanzuur of cotrimoxazol het eerder gestarte ciprofloxacine te stoppen. Dit beleid vermindert het risico op bijwerkingen en op resistentie-ontwikkeling. Vooral ciprofloxacine kent een risico op ernstige bijwerkingen (switch naar: 1e keus: amoxicilline 3 dd 500 mg. 2e keus amoxicilline/clavulaanzuur 3 dd 500/125 mg of cotrimoxazol 2 dd 960 mg)',
-      docs:
-        '<treatment>. Urine op kweek, graag contact over uitslag. Opnieuw controle van urine (met urinestrip) is niet nodig indien de klachten na de kuur verdwijnen. Contact indien na 48 uur geen vebetering of verergering optreedt en bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
+      docs: '<treatment>. Urine op kweek, graag contact over uitslag. Contact indien na 48 uur geen vebetering of verergering optreedt en bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
     },
     children: {
       antibiotics: {
@@ -220,8 +219,7 @@ export const uti = {
       },
       advice:
         'Leg uit dat een urineweginfectie ernstig kan verlopen en een antibioticum noodzakelijk is. Adviseer ruime vochtinname. Instrueer de patiënt contact op te nemen indien < 48 uur geen verbetering optreedt, of eerder bij verergering van het ziektebeeld of zich ontwikkelende verwardheid. Leg uit aan ouders met een kind van > 1 maand en < 2 jaar dat het maken van een echo van de urinewegen nodig is om uit te sluiten dat er sprake is van een onderliggende oorzaak van de infectie. Geef ouders van kinderen die zindelijk zijn of > 5 jaar uitleg over de werking van de bekkenbodem en vertel dat ontspanning nodig is voor volledige lediging van blaas en darmen.',
-      docs:
-        '<treatment>. Urine op kweek, graag contact over uitslag. Opnieuw controle van urine (met urinestrip) is niet nodig indien de klachten na de kuur verdwijnen. Contact indien na 48 uur geen vebetering of verergering optreedt en bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
+      docs: '<treatment>. Urine op kweek, graag contact over uitslag. Contact indien na 48 uur geen vebetering of verergering optreedt en bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
     },
   },
 };

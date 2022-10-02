@@ -1,3 +1,5 @@
+<script lang="ts" setup></script>
+
 <template>
   <div class="vff">
     <div class="f-container">
@@ -12,23 +14,27 @@
                 <span class="f-sub">
                   <span class="f-help about-text"
                     >Ik heb deze website gemaakt omdat de afwegingen bij
-                    urineonderzoek, hoewel protocolair, best veel kunnen zijn om
-                    te onthouden. De website is gebaseerd op de
+                    urineonderzoek, hoewel ze protocolair zijn, veel zijn om te
+                    onthouden. De website is gebaseerd op de
                     <a
+                      class="hover:text-white text-success"
                       href="https://richtlijnen.nhg.org/standaarden/urineweginfecties#volledige-tekst"
                       >NHG-standaard Urineweginfecties</a
                     >, de
                     <a
+                      class="text-success"
                       href="https://www.nvkc.nl/kwaliteit/richtlijnen/normen-en-richtlijnen"
                       >NVKC richtlijn Eenduidige en accurate
                       laboratoriumdiagnostiek bij hematurie</a
                     >, een artikel in de H&W
                     <a
+                      class="text-success"
                       href="https://www.henw.org/artikelen/microscopisch-erytrocytenverlies-de-urine"
                       >Microscopisch erytrocytenverlies in de urine</a
                     >
                     en de
                     <a
+                      class="text-success"
                       href="https://www.nvu.nl/kwaliteitsbeleid/richtlijnen/actuele-richtlijnen/"
                       >NVU richtlijn Hematurie</a
                     >. Hopelijk helpt het om het urineonderzoek iets
@@ -86,5 +92,17 @@
     font-weight: 400;
     text-transform: uppercase;
     padding-top: 12px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    header.navbar {
+      padding: 6px 13.5%;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    header.navbar {
+      padding: 6px 18%;
+    }
   }
 </style>
