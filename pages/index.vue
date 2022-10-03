@@ -6,6 +6,10 @@
   import AdvicePage from '@/components/FormAdvice.vue';
   const store = useStore();
 
+  useHead({
+    titleTemplate: 'urinest.rip',
+  });
+
   const language = new LanguageModel({
     enterKey: 'Enter',
     shiftKey: 'Shift',

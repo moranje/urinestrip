@@ -1,4 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+  useHead({
+    titleTemplate: 'urinest.rip',
+  });
+</script>
 
 <template>
   <div class="vff">
