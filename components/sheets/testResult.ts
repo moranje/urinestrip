@@ -8,7 +8,7 @@ export const testResult = sheet({
   options: [
     {
       label:
-        'Gezonde, niet-zwangere vrouwen met eerder objectief vastgestelde urineweginfecties bij herkenning van de klachten',
+        'Gezonde, niet-zwangere vrouwen met eerder objectief vastgestelde urineweginfecties bij herkenning van de klachten (urineonderzoek niet nodig)',
       value: 'recognizedComplaint',
     },
     {

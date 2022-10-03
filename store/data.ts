@@ -14,7 +14,7 @@ export const uti: {
     healthy: {
       antibiotics: {
         description: [
-          'Afwachtend beleid (eventueel met pijnstilling), opnieuw urineonderzoek indien geen verbetering na 7 dagen, als de urineweg infectie niet weg is start alsnog met antibiotica.',
+          'Afwachtend beleid (eventueel met pijnstilling), opnieuw urineonderzoek indien geen verbetering na 7 dagen, als de urineweg infectie niet weg is start alsnog met antibiotica',
           'Nitrofurantoïne, 5 dagen, 2 dd 100 mg mga of 4 dd 50 mg',
           'Fosfomycine, eenmalig, 3 g, bij voorkeur voor de nacht',
           'Trimethoprim, 3 dagen, 1 dd 300 mg voor de nacht',
@@ -27,7 +27,7 @@ export const uti: {
         ],
       },
       advice:
-        'Leg uit dat een cystitis veel voorkomt, niet besmettelijk is, maar kan terugkomen. Het betreft een hinderlijke, in principe onschuldige aandoening, die spontaan binnen 1 week kan genezen.\nMet antibiotische behandeling zijn de klachten doorgaans eerder verdwenen. Klachten kunnen tot enkele dagen na afloop van de behandeling blijven bestaan. Antibioticagebruik kan echter leiden tot bijwerkingen en antibioticaresistentie.\nLaat de patiënt bij verergering van de klachten (koorts, algemeen ziek-zijn) direct contact opnemen met de (dienstdoende) huisarts. Controle van de urine is niet nodig indien de klachten, al dan niet met antibiotische behandeling, verdwijnen. Verricht, wanneer de klachten bij behandeling met alleen pijnstilling langer dan een week aanhouden, opnieuw urineonderzoek en start bij een persisterende infectie antibiotische behandeling. Verricht, wanneer de klachten 24 tot 48 uur na afloop van een antibioticumkuur niet duidelijk zijn afgenomen, opnieuw urineonderzoek en verstrek, indien aangewezen, een ander antibioticum dan het eerst gegeven middel. Ook bij afdoende behandeling kunnen klachten tot enkele dagen na behandeling blijven bestaan.',
+        'Leg uit dat een cystitis veel voorkomt, niet besmettelijk is, maar kan terugkomen. Het betreft een hinderlijke, in principe onschuldige aandoening, die spontaan binnen 1 week kan genezen (55% van gezonde vrouwen).\nMet antibiotische behandeling zijn de klachten doorgaans eerder verdwenen. Klachten kunnen tot enkele dagen na afloop van de behandeling blijven bestaan. Antibioticagebruik kan echter leiden tot bijwerkingen en antibioticaresistentie.\nLaat de patiënt bij verergering van de klachten (koorts, algemeen ziek-zijn) direct contact opnemen met de (dienstdoende) huisarts. Controle van de urine is niet nodig indien de klachten, al dan niet met antibiotische behandeling, verdwijnen. Verricht, wanneer de klachten bij behandeling met alleen pijnstilling langer dan een week aanhouden, opnieuw urineonderzoek en start bij een persisterende infectie antibiotische behandeling. Verricht, wanneer de klachten 24 tot 48 uur na afloop van een antibioticumkuur niet duidelijk zijn afgenomen, opnieuw urineonderzoek en verstrek, indien aangewezen, een ander antibioticum dan het eerst gegeven middel. Ook bij afdoende behandeling kunnen klachten tot enkele dagen na behandeling blijven bestaan.',
       docs: '<treatment>. Contact bij klachten zoals beschreven op https://www.thuisarts.nl/blaasontsteking.',
     },
     vulnerable: {
