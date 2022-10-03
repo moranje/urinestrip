@@ -14,7 +14,7 @@ export const uti: {
     healthy: {
       antibiotics: {
         description: [
-          'Afwachtend beleid (eventueel met pijnstilling), opnieuw urineonderzoek indien geen verbetering na 7 dagen',
+          'Afwachtend beleid (eventueel met pijnstilling), opnieuw urineonderzoek indien geen verbetering na 7 dagen, als de urineweg infectie niet weg is start alsnog met antibiotica.',
           'Nitrofurantoïne, 5 dagen, 2 dd 100 mg mga of 4 dd 50 mg',
           'Fosfomycine, eenmalig, 3 g, bij voorkeur voor de nacht',
           'Trimethoprim, 3 dagen, 1 dd 300 mg voor de nacht',
