@@ -3,12 +3,12 @@ import { useStore } from '@/store/store';
 
 export const testResult = sheet({
   id: 'testResult',
-  title: 'Test uitslag',
+  title: 'Test uitslag (op volgorde van afhandelen)',
 
   options: [
     {
       label:
-        'Gezonde, niet-zwangere vrouwen met eerder objectief vastgestelde urineweginfecties bij herkenning van de klachten (urineonderzoek niet nodig)',
+        'Geen urine (nodig): Gezonde, niet-zwangere vrouwen met eerder objectief vastgestelde urineweginfecties bij herkenning van de klachten',
       value: 'recognizedComplaint',
     },
     {
