@@ -1,5 +1,5 @@
 import { sheet } from './_base';
-import { useStore } from '@/store/store';
+import { SubLeukocytes, useStore } from '@/store/store';
 
 export const leukocytes = sheet({
   id: 'leukocytes',
@@ -16,26 +16,15 @@ export const leukocytes = sheet({
     },
     {
       label: 'Kweek',
-      value: 'urineCultures',
+      value: 'urineCulture',
     },
   ],
 
   jump() {
     const store = useStore();
-    const answer = store.getQuestion('leukocytes')?.model ?? '';
+    const answer = store.getQuestion('leukocytes').model as SubLeukocytes;
 
-    store.setAdvice(
-      'Omdat een deel van urineweginfecties gemist wordt met alleen de nitriet test (iets meer dan 20%) wordt bij positieve leukocyten aanvullende diagnostiek geadviseerd.'
-    );
-    store.setDocumentation(
-      `Vooralsnog geen urineweginfectie aan kunnen tonen, omdat er wel witte bloedcellen werden gevonden wordt aanvullend nog een ${
-        answer === 'dipslide'
-          ? 'dipslide'
-          : answer === 'urineSediment'
-          ? 'urinesediment'
-          : 'urinekweek'
-      } gedaan. Mocht hierbij een bacterie gevonden worden dan kan behandeling nodig zijn.`
-    );
+    store.setNamespace(`leukocytes.${answer}.0`);
 
     return '_submit';
   },

@@ -8,12 +8,12 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.3.5",
-    "nuxt": "^3.0.0-rc.8",
+    "nuxt": "^3.0.0-rc.12",
     "sass": "^1.55.0"
   },
   "dependencies": {
     "@ditdot-dev/vue-flow-form": "^2.3.1",
-    "@pinia/nuxt": "^0.4.1",
+    "@pinia/nuxt": "^0.4.3",
     "pinia": "^2.0.23"
   }
 }

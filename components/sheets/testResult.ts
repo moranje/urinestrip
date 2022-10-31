@@ -1,5 +1,5 @@
 import { sheet } from './_base';
-import { useStore } from '@/store/store';
+import { SubOther, useStore } from '@/store/store';
 
 export const testResult = sheet({
   id: 'testResult',
@@ -22,7 +22,7 @@ export const testResult = sheet({
     {
       label:
         'Aanhoudend vermoeden UWI ondanks negatieve nitriet en dipslide/urinesediment',
-      value: 'urineCulture',
+      value: 'clinicalSuspicion',
     },
     {
       label: 'Leukocyten',
@@ -34,7 +34,7 @@ export const testResult = sheet({
     },
     {
       label: 'Overig',
-      value: 'other',
+      value: 'noConclusiveAbnormality',
     },
   ],
 
@@ -46,11 +46,7 @@ export const testResult = sheet({
       leukocytes: 'leukocytes',
       blood: 'blood',
     };
-    const answer = store.getQuestion('testResult')?.model ?? '';
-
-    if (answer === 'blood') store.setFromPath('hematuria');
-
-    if (goTo[answer]) return goTo[answer];
+    const answer = store.getQuestion('testResult').model;
 
     if (answer === 'recognizedComplaint') {
       store.updateQuestion('tissueInvasion', { model: 'local' });
@@ -59,14 +55,10 @@ export const testResult = sheet({
       return 'urinaryCatheter';
     }
 
-    if (answer === 'urineCulture') {
-      store.setAdvice(
-        'Verricht een kweek met resistentiebepaling bij een aanhoudend vermoeden van een urineweginfectie, terwijl urinestick en dipslide of sediment negatief blijven.'
-      );
-      store.setFromPath(
-        'Gezien aanhoudend vermoeden op urineweginfectie toch urinekweek ingezet'
-      );
-    }
+    if (goTo[answer]) return goTo[answer];
+
+    console.log('ANSWER', answer);
+    store.setNamespace(`other.${answer as SubOther}.0`);
 
     return '_submit';
   },

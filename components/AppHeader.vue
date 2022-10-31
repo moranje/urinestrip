@@ -2,7 +2,12 @@
 
 <template>
   <header class="navbar flex justify-between">
-    <logo @click="navigateTo('/')" class="navbar-item" />
+    <logo
+      v-if="$route.name === 'index'"
+      @click="$router.go(0)"
+      class="navbar-item"
+    />
+    <logo v-else @click="$router.push('/')" class="navbar-item" />
     <img
       @click="navigateTo('/about')"
       src="../assets/user-image.jpeg"

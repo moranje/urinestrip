@@ -44,10 +44,7 @@ export const riskAssessment = sheet({
       store.getQuestion('tissueInvasion')?.model === 'tissueInvasion' &&
       store.getQuestion('riskAssessment')?.model === 'pregnant'
     ) {
-      store.setAdvice(
-        'Een pyelonefritis in de zwangerschap gaat gepaard met een verhoogd risico op ernstige morbiditeit of mortaliteit. Het advies om zwangeren met een pyelonefritis voor behandeling te verwijzen naar de 2e lijn sluit aan bij de aanbeveling uit de richtlijn Urineweginfecties in de Zwangerschap van de NVOG'
-      );
-      store.setDocumentation('Verwijzing naar gynaecoloog');
+      store.setNamespace('uti.tissueInvasion.pregnant.0');
 
       return '_submit';
     }

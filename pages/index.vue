@@ -54,7 +54,7 @@
   }
 
   function copy() {
-    navigator.clipboard.writeText(store.getDocumentation).then(
+    navigator.clipboard.writeText(store.getTreatmentOption.documentation).then(
       () => (copied.value = true),
       () => console.error('Copy failed')
     );
@@ -78,12 +78,7 @@
 <template>
   <flow-form ref="flowform" :language="language" v-on:complete="onComplete">
     <template v-slot:complete>
-      <advice-page
-        :advice="store.getAdvice"
-        :docs="store.getDocumentation"
-        :contra-indications="store.getContraIndications"
-        :type="store.getFromPath"
-      />
+      <advice-page />
     </template>
 
     <template v-slot:completeButton>
@@ -93,7 +88,7 @@
           ref="button"
           type="submit"
           href="#"
-          v-on:click.prevent="copy()"
+          v-on:click.prevent="copy"
           aria-label="Kopieer documentatie"
         >
           <span>Kopieer</span>

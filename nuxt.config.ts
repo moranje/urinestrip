@@ -3,6 +3,7 @@ import { defineNuxtConfig } from 'nuxt';
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   taget: 'static',
+
   ssr: false,
 
   typescript: {
@@ -15,7 +16,7 @@ export default defineNuxtConfig({
   ],
 
   tailwindcss: {
-    configPath: '@/config/tailwind.js',
+    configPath: 'tailwind.config.js',
   },
 
   modules: [

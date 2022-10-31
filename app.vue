@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <AppHeader />
-    <NuxtPage />
+    <AppHeader class="sticky top-0" />
+    <NuxtPage class="relative" />
   </div>
 </template>

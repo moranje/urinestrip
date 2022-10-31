@@ -1,6 +1,5 @@
 import { sheet } from './_base';
-import { uti } from '@/store/data.js';
-import { useStore } from '@/store/store';
+import { Choice, RiskGroups, Spread, useStore } from '@/store/store';
 
 export const antibiotics = sheet({
   id: 'antibiotics',
@@ -10,20 +9,16 @@ export const antibiotics = sheet({
 
   jump() {
     const store = useStore();
-    const tissueInvasion = store.getQuestion('tissueInvasion')?.model ?? '';
-    const riskAssessment = store.getQuestion('riskAssessment')?.model ?? '';
-    const antibiotics = store.getQuestion('antibiotics')?.model ?? '';
+    const tissueInvasion = (store.getQuestion('tissueInvasion')?.model ??
+      '') as Spread;
+    const riskAssessment = (store.getQuestion('riskAssessment')?.model ??
+      '') as RiskGroups;
+    const antibiotics = (store.getQuestion('antibiotics')?.model ??
+      '') as Choice;
 
-    const [description, contraIndications] = antibiotics.split('|');
-
-    store.setAdvice(uti[tissueInvasion][riskAssessment].advice);
-    store.setDocumentation(
-      uti[tissueInvasion][riskAssessment].docs.replace(
-        '<treatment>',
-        description
-      )
+    store.setNamespace(
+      `uti.${tissueInvasion}.${riskAssessment}.${antibiotics}`
     );
-    store.setContraIndications(contraIndications);
 
     return '_submit';
   },

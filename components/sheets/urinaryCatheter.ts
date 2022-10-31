@@ -22,29 +22,26 @@ export const urinaryCatheter = sheet({
     const store = useStore();
 
     if (
-      store.getQuestion('tissueInvasion')?.model === 'local' &&
-      store.getQuestion('riskAssessment')?.model !== 'pregnant' &&
-      store.getQuestion('urinaryCatheter')?.model === 'yes'
+      store.getQuestion('tissueInvasion').model === 'local' &&
+      store.getQuestion('riskAssessment').model !== 'pregnant' &&
+      store.getQuestion('urinaryCatheter').model === 'yes'
     ) {
-      store.setAdvice(
-        'Behandeling van asymptomatische bacteriurie wordt in alle patiëntgroepen, met uitzondering van zwangeren, afgeraden'
-      );
-      store.setDocumentation('Geen behandeling nodig.');
+      store.setNamespace('uti.local.cadMen.0');
 
       return '_submit';
     }
 
-    const tissueInvasion = store.getQuestion('tissueInvasion')?.model ?? '';
-    const riskAssessment = store.getQuestion('riskAssessment')?.model ?? '';
+    const tissueInvasion = store.getQuestion('tissueInvasion').model;
+    const riskAssessment = store.getQuestion('riskAssessment').model;
 
     store.updateQuestion('antibiotics', {
-      options: uti[tissueInvasion][riskAssessment].antibiotics.description.map(
-        (antibiotic, index) => {
-          let name = antibiotic.split(',')[0];
+      options: uti[tissueInvasion][riskAssessment].treatment.map(
+        (option, index) => {
+          let name = option.description.split(',')[0];
 
           return new ChoiceOption({
             label: name,
-            value: `${antibiotic}|${uti[tissueInvasion][riskAssessment].antibiotics.contraIndications[index]}`,
+            value: `${index}`,
           });
         }
       ),
