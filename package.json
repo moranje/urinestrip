@@ -9,7 +9,7 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.3.5",
     "nuxt": "^3.0.0-rc.12",
-    "sass": "^1.55.0"
+    "sass": "^1.56.0"
   },
   "dependencies": {
     "@ditdot-dev/vue-flow-form": "^2.3.1",
