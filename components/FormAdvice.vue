@@ -69,10 +69,7 @@
         {{ store.getTreatmentOption.testAfterTreatment }}
       </div>
     </div>
-    <div
-      v-if="store.getTreatmentOption.contraIndications != null"
-      class="flex flex-wrap p-0"
-    >
+    <div v-if="store.getTreatment.sources != null" class="flex flex-wrap p-0">
       <h3 class="pb-4 min-w-12 flex-1/4w">Bronnen</h3>
       <div class="pb-4 min-w-32 flex-3/4w">
         <ol>
