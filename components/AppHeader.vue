@@ -8,6 +8,7 @@
       class="navbar-item"
     />
     <logo v-else @click="$router.push('/')" class="navbar-item" />
+    <dev-only> test </dev-only>
     <img
       @click="navigateTo('/about')"
       src="../assets/user-image.jpeg"
@@ -42,8 +43,8 @@
   }
 
   header.navbar {
-    background-color: #34495e;
-    border-bottom: 2px solid #8e44ad;
+    background-color: var(--vff-bg-color);
+    border-bottom: 2px solid var(--vff-main-accent-color);
     padding: 6px 8%;
   }
 

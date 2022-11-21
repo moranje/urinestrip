@@ -20,7 +20,7 @@
         />
       </clipPath>
     </defs>
-    <g fill="#ffffff" fill-opacity="1">
+    <g fill="var(--vff-main-text-color)" fill-opacity="1">
       <g
         transform="translate(8.200234,
 30.176844)"
@@ -47,7 +47,7 @@
         </g>
       </g>
     </g>
-    <g fill="#ffffff" fill-opacity="1">
+    <g fill="var(--vff-main-text-color)" fill-opacity="1">
       <g transform="translate(30.598248, 30.176844)">
         <g>
           <path
@@ -67,7 +67,7 @@
         </g>
       </g>
     </g>
-    <g fill="#ffffff" fill-opacity="1">
+    <g fill="var(--vff-main-text-color)" fill-opacity="1">
       <g
         transform="translate(42.360338,
 30.176844)"
@@ -94,7 +94,7 @@
         </g>
       </g>
     </g>
-    <g fill="#ffffff" fill-opacity="1">
+    <g fill="var(--vff-main-text-color)" fill-opacity="1">
       <g transform="translate(50.712669, 30.176844)">
         <g>
           <path
@@ -123,7 +123,7 @@
         </g>
       </g>
     </g>
-    <g fill="#ffffff" fill-opacity="1">
+    <g fill="var(--vff-main-text-color)" fill-opacity="1">
       <g transform="translate(66.510156, 30.176844)">
         <g>
           <path
@@ -149,7 +149,7 @@
         </g>
       </g>
     </g>
-    <g fill="#ffffff" fill-opacity="1">
+    <g fill="var(--vff-main-text-color)" fill-opacity="1">
       <g transform="translate(78.5225, 30.176844)">
         <g>
           <path
@@ -178,7 +178,7 @@ C 4.1875 -10.960938 3.34375 -8.988281 2.15625 -6.6875 C 2.632812 -6.4375 2.875
         </g>
       </g>
     </g>
-    <g fill="#ffffff" fill-opacity="1">
+    <g fill="var(--vff-main-text-color)" fill-opacity="1">
       <g transform="translate(90.472277, 30.176844)">
         <g>
           <path
@@ -213,7 +213,7 @@ C 4.1875 -10.960938 3.34375 -8.988281 2.15625 -6.6875 C 2.632812 -6.4375 2.875
         </g>
       </g>
     </g>
-    <g fill="#ffffff" fill-opacity="1">
+    <g fill="var(--vff-main-text-color)" fill-opacity="1">
       <g
         transform="translate(107.042489,
 30.176844)"
@@ -236,7 +236,7 @@ C 6.679688 -12.632812 6.289062 -12.328125 5.8125 -11.890625 L 3.3125 0 L -1.1875
         </g>
       </g>
     </g>
-    <g fill="#ffffff" fill-opacity="1">
+    <g fill="var(--vff-main-text-color)" fill-opacity="1">
       <g transform="translate(118.804579, 30.176844)">
         <g>
           <path
@@ -261,7 +261,7 @@ C 6.679688 -12.632812 6.289062 -12.328125 5.8125 -11.890625 L 3.3125 0 L -1.1875
       </g>
     </g>
     <g clip-path="url(#id1)">
-      <g fill="#ffffff" fill-opacity="1">
+      <g fill="var(--vff-main-text-color)" fill-opacity="1">
         <g transform="translate(127.15691, 30.176844)">
           <g>
             <path
