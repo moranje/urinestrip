@@ -3,7 +3,7 @@ import { SubLeukocytes, useStore } from '@/store/store';
 
 export const leukocytes = sheet({
   id: 'leukocytes',
-  title: 'Welke vervolgonderzoek krijgt patiënt?',
+  title: 'Welke vervolgonderzoek kiest u voor patiënt?',
 
   options: [
     {

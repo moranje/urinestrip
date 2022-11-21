@@ -757,7 +757,7 @@ export const other: {
         description: 'Verdere diagnostiek noodzakelijk.',
         contraIndications: null,
         documentation:
-          'Vooralsnog geen urineweginfectie aan kunnen tonen, maar biij een aanhoudend klinisch vermoeden wordt een urine kweek gedaan. Mocht hierbij een bacterie gevonden worden dan kan behandeling nodig zijn.',
+          'Vooralsnog geen urineweginfectie aan kunnen tonen, maar bij een aanhoudend klinisch vermoeden wordt een urine kweek gedaan. Mocht hierbij een bacterie gevonden worden dan kan behandeling nodig zijn.',
       },
     ],
     explainer:
@@ -775,7 +775,7 @@ export const other: {
         description: 'Geen urineweginfectie gevonden.',
         contraIndications: null,
         documentation:
-          'De kans op een urineweginfectie is verwaarloosbaar, bij aanhoudende klachten moeten andere oorzaken worden overwogen.',
+          'De kans op een urineweginfectie is verwaarloosbaar, bij aanhoudende klachten moeten andere oorzaken worden overwogen. Bij kwetsbare ouderen wordt een negatieve nitriet in combinatie met leukocytentest gebruikt om een urineweginfectie uit te sluiten.',
       },
     ],
     explainer:
@@ -784,6 +784,10 @@ export const other: {
       {
         name: 'NHG-Standaard Urineweginfecties',
         url: 'https://richtlijnen.nhg.org/standaarden/urineweginfecties#volledige-tekst-richtlijnen-beleid-bij-cystitis',
+      },
+      {
+        name: 'Verenso Richtlijn Urineweginfecties',
+        url: 'https://www.verenso.nl/richtlijnen-en-praktijkvoering/richtlijnendatabase/urineweginfecties/diagnostiek-klinische-verschijnselen-van-urineweginfecties-bij-kwetsbare-ouderen',
       },
     ],
   },
