@@ -55,6 +55,7 @@
   header.navbar .navbar-item:hover {
     filter: invert(0) sepia(1) saturate(1) hue-rotate(0deg) brightness(1)
       drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+    cursor: pointer;
   }
 
   @media screen and (min-width: 1024px) {
