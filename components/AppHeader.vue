@@ -2,13 +2,17 @@
 
 <template>
   <header class="navbar flex justify-between">
-    <logo
-      v-if="$route.name === 'index'"
-      @click="$router.go(0)"
-      class="navbar-item"
-    />
-    <logo v-else @click="$router.push('/')" class="navbar-item" />
-    <dev-only> test </dev-only>
+    <logo v-if="$route.name === 'index'" @click="$router.go(0)" />
+    <logo v-else @click="$router.push('/')" />
+    <dev-only>
+      <button
+        type="button"
+        @click="navigateTo('/editor')"
+        class="block px-4 py-2 border-2 border-green-500 text-green-500 font-medium text-s leading-tight uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+      >
+        Editor
+      </button>
+    </dev-only>
     <img
       @click="navigateTo('/about')"
       src="../assets/user-image.jpeg"
@@ -18,43 +22,17 @@
   </header>
 </template>
 
-<style scoped>
-  :root {
-    --vff-bg-color: #f9f6fb;
-    --vff-main-text-color: #181818;
-    --vff-secondary-text-color: #7f8c8d;
-    --vff-tertiary-text-color: #f1f1f1;
-    --vff-main-accent-color: #27ae60;
-    --vff-secondary-accent-color: #2ecc71;
-    --vff-tertiary-accent-color: #8e44ad;
-    --vff-header-color: var(--vff-tertiary-accent-color);
-    --vff-header-border-color: transparent;
-    --vff-button-color: var(--vff-main-accent-color);
-    --vff-button-hover-color: var(--vff-secondary-accent-color);
-    --vff-button-text-color: #fff;
-    --vff-main-form-bg-color: #f9f6fb;
-    --vff-secondary-form-bg-color: #475a6d;
-    --vff-form-input-color: var(--vff-main-text-color);
-    --vff-field-key-color: var(--vff-main-accent-color);
-    --vff-arrow-color: var(--vff-main-text-color);
-    --vff-arrow-hover-color: rgba(0, 0, 0, 0.07);
-    --vff-footer-color: rgba(249, 246, 251, 0.75);
-    --vff-progress-bar-color: var(--vff-main-text-color);
-  }
-
+<style lang="scss" scoped>
   header.navbar {
     background-color: var(--vff-bg-color);
     border-bottom: 2px solid var(--vff-main-accent-color);
     padding: 6px 8%;
   }
 
-  header.navbar svg {
-    fill: var(--vff-main-text-color);
-  }
-
   header.navbar .navbar-item:hover {
-    filter: invert(0) sepia(1) saturate(1) hue-rotate(0deg) brightness(1)
-      drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+    /* filter: invert(0) sepia(1) saturate(1) hue-rotate(0deg) brightness(1)
+      drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5)); */
+    border: 2px solid var(--vff-main-accent-color);
     cursor: pointer;
   }
 
