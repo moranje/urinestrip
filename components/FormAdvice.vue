@@ -31,7 +31,7 @@
       <div class="pb-4 min-w-32 flex-3/4w">
         <ul class="!mb-0">
           <li
-            class="text-red-400 !text-lg"
+            class="text-red-500 !text-lg"
             v-for="item in store.getTreatmentOption.contraIndications"
           >
             {{ item.charAt(0).toUpperCase() + item.slice(1) }}
@@ -41,7 +41,7 @@
     </div>
     <div v-if="store.getTreatmentOption.info" class="flex flex-wrap p-0">
       <h3 class="pb-4 min-w-12 flex-1/4w">Informatie</h3>
-      <div class="pb-4 min-w-32 flex-3/4w text-orange-300 text-lg">
+      <div class="pb-4 min-w-32 flex-3/4w text-orange-500 text-lg">
         {{ store.getTreatmentOption.info }}
       </div>
     </div>
@@ -74,7 +74,11 @@
       <div class="pb-4 min-w-32 flex-3/4w">
         <ol>
           <li v-for="link in store.getTreatment.sources">
-            <a class="text-success text-lg" :href="link.url">{{ link.name }}</a>
+            <a
+              class="!text-green-500 hover:!text-green-600 text-lg"
+              :href="link.url"
+              >{{ link.name }}</a
+            >
           </li>
         </ol>
       </div>
