@@ -21,24 +21,24 @@
                     urineonderzoek, hoewel ze protocolair zijn, veel zijn om te
                     onthouden. De website is gebaseerd op de
                     <a
-                      class="hover:text-white text-success"
+                      class="text-success hover:!text-green-600"
                       href="https://richtlijnen.nhg.org/standaarden/urineweginfecties#volledige-tekst"
                       >NHG-standaard Urineweginfecties</a
                     >, de
                     <a
-                      class="text-success"
+                      class="text-success hover:!text-green-600"
                       href="https://www.nvkc.nl/kwaliteit/richtlijnen/normen-en-richtlijnen"
                       >NVKC richtlijn Eenduidige en accurate
                       laboratoriumdiagnostiek bij hematurie</a
                     >, een artikel in de H&W
                     <a
-                      class="text-success"
+                      class="text-success hover:!text-green-600"
                       href="https://www.henw.org/artikelen/microscopisch-erytrocytenverlies-de-urine"
                       >Microscopisch erytrocytenverlies in de urine</a
                     >
                     en de
                     <a
-                      class="text-success"
+                      class="text-success hover:!text-green-600"
                       href="https://www.nvu.nl/kwaliteitsbeleid/richtlijnen/actuele-richtlijnen/"
                       >NVU richtlijn Hematurie</a
                     >. Hopelijk helpt het om het urineonderzoek iets
@@ -57,7 +57,9 @@
               </span>
             </div>
             <p class="about-name">
-              <a href="https://www.linkedin.com/in/martienoranje/"
+              <a
+                class="t hover:!text-gray-300"
+                href="https://www.linkedin.com/in/martienoranje/"
                 >Martien Oranje, huisarts</a
               >
             </p>
