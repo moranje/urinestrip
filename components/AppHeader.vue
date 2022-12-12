@@ -28,11 +28,16 @@
   header.navbar {
     background-color: var(--vff-bg-color);
     border-bottom: 2px solid var(--vff-main-accent-color);
-    padding: 8px 5% 4px 5%;
   }
 
   header.navbar .navbar-item:hover {
     // border: 2px solid var(--vff-main-accent-color);
     cursor: pointer;
+  }
+
+  @media screen and (min-width: 1366px) {
+    header.navbar {
+      padding: 8px 10% 4px 10%;
+    }
   }
 </style>
