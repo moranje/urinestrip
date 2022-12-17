@@ -76,7 +76,14 @@
 </script>
 
 <template>
-  <flow-form ref="flowform" :language="language" v-on:complete="onComplete">
+  <flow-form
+    ref="flowform"
+    :language="language"
+    v-on:complete="onComplete"
+    :standalone="false"
+    :progressbar="false"
+    :navigation="false"
+  >
     <template v-slot:complete>
       <advice-page />
     </template>

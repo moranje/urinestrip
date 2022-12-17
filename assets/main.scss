@@ -62,6 +62,11 @@ body {
 .vff.vff-not-standalone {
   background-color: var(--vff-bg-color);
   color: var(--vff-main-text-color);
+  padding-bottom: 0;
+}
+
+.vff .vff-footer {
+  display: none !important;
 }
 
 header.vff-header {

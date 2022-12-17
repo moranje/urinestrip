@@ -22,6 +22,12 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Een workflow voor urineonderzoek' },
       ],
       link: [{ rel: 'manifest`', href: 'manifest.json' }],
+      script: [
+        {
+          type: 'module',
+          src: 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js',
+        },
+      ],
       noscript: [
         // <noscript>Javascript is required</noscript>
         { children: 'Javascript is required' },
@@ -36,6 +42,13 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     configPath: 'tailwind.config.js',
+  },
+
+  googleFonts: {
+    download: true,
+    families: {
+      Inter: true,
+    },
   },
 
   // vite: {
@@ -58,4 +71,6 @@ export default defineNuxtConfig({
       },
     ],
   ],
+
+  buildModules: ['@nuxtjs/google-fonts'],
 });
