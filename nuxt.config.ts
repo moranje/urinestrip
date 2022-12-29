@@ -15,11 +15,15 @@ export default defineNuxtConfig({
         lang: 'nl',
       },
       charset: 'utf-16',
-      title: 'urinest.rip',
+      title: 'urinest.rip - Interpretatie van urineonderzoek',
       meta: [
         // <meta name="description" content="My amazing site">
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Een workflow voor urineonderzoek' },
+        {
+          name: 'description',
+          content:
+            'Makkelijk uitslagen van urine onderzoek interpreteren aan de hand van oa. de NHG-standaard urineweginfecties. Gemaakt door een huisarts voor zorgverleners die met de interpretatie urineonderzoek te maken hebben.',
+        },
       ],
       link: [{ rel: 'manifest`', href: 'manifest.json' }],
       script: [
