@@ -1,6 +1,14 @@
-# Nuxt 3 Minimal Starter
+[![Banner](/assets/banner.png)](https://www.linkedin.com/in/martienoranje/)
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+<h1 align="center">
+URINEST.RIP
+</h1>
+
+Descision support for the interpretation of urine test results for medical professionals. Mostly intended for GP practices. But it's for anyone interested. No judgement if you like looking at pee.
+
+## Website
+
+Find the latest version at [www.urinest.rip](https://www.urinest.rip/)
 
 ## Setup
 
@@ -38,5 +46,3 @@ Locally preview production build:
 ```bash
 npm run preview
 ```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
