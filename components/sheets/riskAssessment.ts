@@ -44,7 +44,7 @@ export const riskAssessment = sheet({
       store.getQuestion('tissueInvasion')?.model === 'tissueInvasion' &&
       store.getQuestion('riskAssessment')?.model === 'pregnant'
     ) {
-      store.setNamespace('uti.tissueInvasion.pregnant.0');
+      store.setPath('uti.tissueInvasion.pregnant.0');
 
       return '_submit';
     }

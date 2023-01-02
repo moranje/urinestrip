@@ -16,10 +16,13 @@ export interface JumpObject {
 interface SheetOptions {
   type: string;
   id: string;
-  title: string;
+
   tagline?: string;
+  title?: string;
   subtitle?: string;
   description?: string;
+  helpText?: string;
+  helpTextShow?: boolean;
   required?: boolean;
   jump?: JumpFunction | JumpObject;
   navigation?: boolean;
@@ -38,19 +41,22 @@ export interface FormQuestion extends SheetOptions {
 export function sheet({
   id,
   title,
+  helpText = '',
   required = true,
   jump,
   options,
 }: {
   id: string;
   title: string;
-  options: ChoiceOption[];
+  helpText?: string;
   required?: boolean;
+  options: ChoiceOption[];
   jump?: JumpFunction | JumpObject;
 }) {
   return function () {
     const question = {
       title,
+      helpText,
       required,
       jump,
       options,

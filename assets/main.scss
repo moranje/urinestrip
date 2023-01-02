@@ -23,7 +23,7 @@
   --vff-button-color: var(--vff-main-accent-color);
   --vff-button-hover-color: #16a34a;
   --vff-button-text-color: #fff;
-  --vff-main-form-bg-color: #f9f6fb;
+  --vff-main-form-bg-color: #fff;
   --vff-secondary-form-bg-color:  #475a6d;
   --vff-form-input-color: var(--vff-main-text-color);
   --vff-field-key-color: var(--vff-main-accent-color);
@@ -94,7 +94,7 @@ header.vff-header svg.f-logo {
 .vff textarea,
 .vff input,
 .vff select option {
-  color: var(--vff-form-input-color);
+  color: var(--vff-main-text-color);
 }
 
 .vff a,

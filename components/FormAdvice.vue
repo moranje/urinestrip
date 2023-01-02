@@ -7,31 +7,31 @@
 </script>
 
 <template>
-  <dev-only>
-    <button
-      type="button"
-      @click="navigateTo('/editor')"
-      class="absolute top-0 right-0 o-btn-action"
-    >
-      <ion-icon name="create-outline"></ion-icon>
-    </button>
-  </dev-only>
-  <h2>Advies</h2>
-  <!-- <div
-    class="overflow-y-auto h-[calc(100vh_-_64px_-_76px_-_18vh_-_60px_-_48.59px)]"
-  > -->
-  <div class="flex flex-wrap p-0">
-    <h3 class="pb-4 min-w-12 flex-1/4w">Leg uit</h3>
+  <button
+    type="button"
+    @click="navigateTo('/editor')"
+    class="absolute top-0 right-0 o-btn-action"
+  >
+    <ion-icon name="create-outline"></ion-icon>
+  </button>
+  <h2>Checklist</h2>
+  <div
+    v-if="store.getTreatmentOption.additionalTest"
+    class="flex flex-wrap p-0"
+  >
+    <h3 class="pb-4 min-w-12 flex-1/4w">Onderzoek</h3>
     <div class="pb-4 min-w-32 flex-3/4w text-lg">
-      {{ store.getTreatment.explainer }}
+      {{ store.getTreatmentOption.additionalTest }}
     </div>
   </div>
+
   <div class="flex flex-wrap p-0">
-    <h3 class="pb-4 min-w-12 flex-1/4w">Behandeling</h3>
+    <h3 class="pb-4 min-w-12 flex-1/4w">Behandel</h3>
     <div class="pb-4 min-w-32 flex-3/4w font-bold text-lg">
       {{ store.getTreatmentOption.description }}
     </div>
   </div>
+
   <div
     v-if="store.getTreatmentOption.contraIndications != null"
     class="flex flex-wrap p-0"
@@ -48,34 +48,35 @@
       </ul>
     </div>
   </div>
+
   <div v-if="store.getTreatmentOption.info" class="flex flex-wrap p-0">
-    <h3 class="pb-4 min-w-12 flex-1/4w">Informatie</h3>
+    <h3 class="pb-4 min-w-12 flex-1/4w">Waarschuwingen</h3>
     <div class="pb-4 min-w-32 flex-3/4w text-orange-500 text-lg">
       {{ store.getTreatmentOption.info }}
     </div>
   </div>
-  <div
-    v-if="store.getTreatmentOption.additionalTest"
-    class="flex flex-wrap p-0"
-  >
-    <h3 class="pb-4 min-w-12 flex-1/4w">Controle</h3>
-    <div class="pb-4 min-w-32 flex-3/4w text-lg">
-      {{ store.getTreatmentOption.additionalTest }}
-    </div>
-  </div>
-  <div class="flex flex-wrap p-0">
-    <h3 class="pb-4 min-w-12 flex-1/4w">Documentatie</h3>
-    <div class="pb-4 min-w-32 flex-3/4w text-lg">
-      {{ store.getTreatmentOption.documentation }}
-    </div>
-  </div>
+
   <div
     v-if="store.getTreatmentOption.testAfterTreatment"
     class="flex flex-wrap p-0"
   >
-    <h3 class="pb-4 min-w-12 flex-1/4w">Na behandeling</h3>
+    <h3 class="pb-4 min-w-12 flex-1/4w">Vervolg onderzoek</h3>
     <div class="pb-4 min-w-32 flex-3/4w text-lg">
       {{ store.getTreatmentOption.testAfterTreatment }}
+    </div>
+  </div>
+
+  <div class="flex flex-wrap p-0">
+    <h3 class="pb-4 min-w-12 flex-1/4w">Leg uit</h3>
+    <div class="pb-4 min-w-32 flex-3/4w text-lg">
+      {{ store.getTreatment.explainer }}
+    </div>
+  </div>
+
+  <div class="flex flex-wrap p-0">
+    <h3 class="pb-4 min-w-12 flex-1/4w">Documenteer</h3>
+    <div class="pb-4 min-w-32 flex-3/4w text-lg">
+      {{ store.getTreatmentOption.documentation }}
     </div>
   </div>
   <div v-if="store.getTreatment.sources != null" class="flex flex-wrap p-0">

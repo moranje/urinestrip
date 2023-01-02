@@ -1,5 +1,5 @@
 import { sheet } from './_base';
-import { Choice, RiskGroups, Spread, useStore } from '@/store/store';
+import { Choice, Group, Type, useStore } from '@/store/store';
 
 export const antibiotics = sheet({
   id: 'antibiotics',
@@ -10,15 +10,13 @@ export const antibiotics = sheet({
   jump() {
     const store = useStore();
     const tissueInvasion = (store.getQuestion('tissueInvasion')?.model ??
-      '') as Spread;
+      '') as Type;
     const riskAssessment = (store.getQuestion('riskAssessment')?.model ??
-      '') as RiskGroups;
+      '') as Group;
     const antibiotics = (store.getQuestion('antibiotics')?.model ??
       '') as Choice;
 
-    store.setNamespace(
-      `uti.${tissueInvasion}.${riskAssessment}.${antibiotics}`
-    );
+    store.setPath(`uti.${tissueInvasion}.${riskAssessment}.${antibiotics}`);
 
     return '_submit';
   },

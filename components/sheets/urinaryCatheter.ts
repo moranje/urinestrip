@@ -1,7 +1,7 @@
 import { ChoiceOption } from '@ditdot-dev/vue-flow-form';
-import { uti } from '@/store/data.js';
+import data from '@/store/data.json';
 import { sheet } from './_base';
-import { useStore } from '@/store/store';
+import { useStore, Type, Group } from '@/store/store';
 
 export const urinaryCatheter = sheet({
   id: 'urinaryCatheter',
@@ -26,25 +26,23 @@ export const urinaryCatheter = sheet({
       store.getQuestion('riskAssessment').model !== 'pregnant' &&
       store.getQuestion('urinaryCatheter').model === 'yes'
     ) {
-      store.setNamespace('uti.local.cadMen.0');
+      store.setPath('uti.local.cadMen.0');
 
       return '_submit';
     }
 
-    const tissueInvasion = store.getQuestion('tissueInvasion').model;
-    const riskAssessment = store.getQuestion('riskAssessment').model;
+    const type = store.getQuestion('tissueInvasion').model as Type;
+    const group = store.getQuestion('riskAssessment').model as Group;
 
     store.updateQuestion('antibiotics', {
-      options: uti[tissueInvasion][riskAssessment].treatment.map(
-        (option, index) => {
-          let name = option.description.split(',')[0];
+      options: data[`uti.${type}.${group}`].treatment.map((option, index) => {
+        let name = option.description.split(',')[0];
 
-          return new ChoiceOption({
-            label: name,
-            value: `${index}`,
-          });
-        }
-      ),
+        return new ChoiceOption({
+          label: name,
+          value: `${index}`,
+        });
+      }),
     });
 
     // Next question

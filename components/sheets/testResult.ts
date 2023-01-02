@@ -1,5 +1,5 @@
 import { sheet } from './_base';
-import { SubOther, useStore } from '@/store/store';
+import { Conclusion, useStore } from '@/store/store';
 
 export const testResult = sheet({
   id: 'testResult',
@@ -58,7 +58,7 @@ export const testResult = sheet({
     if (goTo[answer]) return goTo[answer];
 
     console.log('ANSWER', answer);
-    store.setNamespace(`other.${answer as SubOther}.0`);
+    store.setPath(`other.${answer as Conclusion}.0`);
 
     return '_submit';
   },

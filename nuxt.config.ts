@@ -74,7 +74,14 @@ export default defineNuxtConfig({
         ],
       },
     ],
+    '@pinia-plugin-persistedstate/nuxt',
   ],
 
   buildModules: ['@nuxtjs/google-fonts'],
+
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => ['ion-icon'].includes(tag),
+    },
+  },
 });

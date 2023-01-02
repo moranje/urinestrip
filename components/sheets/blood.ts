@@ -29,11 +29,11 @@ export const blood = sheet({
     const answer = store.getQuestion('blood').model;
 
     if (answer === 'visibleHematuria') {
-      store.setNamespace('blood.visibleHematuria.0');
+      store.setPath('blood.visibleHematuria.0');
 
       return '_submit';
     } else if (answer === 'proteinuria') {
-      store.setNamespace('blood.proteinuria.0');
+      store.setPath('blood.proteinuria.0');
 
       return '_submit';
     }

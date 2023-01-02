@@ -24,7 +24,7 @@ export const leukocytes = sheet({
     const store = useStore();
     const answer = store.getQuestion('leukocytes').model as SubLeukocytes;
 
-    store.setNamespace(`leukocytes.${answer}.0`);
+    store.setPath(`leukocytes.${answer}.0`);
 
     return '_submit';
   },

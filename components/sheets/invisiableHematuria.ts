@@ -24,7 +24,7 @@ export const invisiableHematuria = sheet({
     const store = useStore();
     const answer = store.getQuestion('invisiableHematuria').model as Choice;
 
-    store.setNamespace(`blood.invisiableHematuria.${answer}`);
+    store.setPath(`blood.invisiableHematuria.${answer}`);
 
     return '_submit';
   },
