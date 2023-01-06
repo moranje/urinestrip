@@ -7,8 +7,7 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: |
-        Fijn dat je laat weten wat je ondervonden hebt!
+      value: "Fijn dat je laat weten wat je ondervonden hebt!"
   - type: input
     id: contact
     attributes:
@@ -23,9 +22,9 @@ body:
       label: Wat merkte je?
       description: Het helpt mij als je kunt vertellen wat het verwachte
         resultaat was?
-      placeholder: Beschrijf wat je zag om een manier dat ik er een beeld bij
-        kan krijgen of het na kan bootsen (nog beter)
-      value: /
+      placeholder: Beschrijf wat er gebeurde op een manier dat ik het kan
+        visualiseren of na kan bootsen.
+      value: " "
     validations:
       required: true
   - type: dropdown
