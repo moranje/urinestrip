@@ -1,5 +1,5 @@
 ---
-name: Bug Report
+name: Bug melden
 description: Laat weten wat er mis ging
 title: "fix: "
 labels: ["bug", "triage"]
@@ -21,7 +21,7 @@ body:
     id: what-happened
     attributes:
       label: Wat merkte je?
-      description: Het helpt mij als je kunt vertellen wat het verwachte
+      description: Het helpt als je kunt vertellen wat het verwachte
         resultaat was?
       placeholder: Beschrijf wat er gebeurde op een manier dat ik het kan
         visualiseren of na kan bootsen.
