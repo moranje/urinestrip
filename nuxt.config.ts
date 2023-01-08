@@ -25,7 +25,12 @@ export default defineNuxtConfig({
             'Makkelijk uitslagen van urine onderzoek interpreteren aan de hand van oa. de NHG-standaard urineweginfecties. Gemaakt door een huisarts voor zorgverleners die met de interpretatie urineonderzoek te maken hebben.',
         },
       ],
-      link: [{ rel: 'manifest`', href: 'manifest.json' }],
+      link: [
+        {
+          rel: 'manifest',
+          href: '/manifest.json',
+        },
+      ],
       script: [
         {
           type: 'module',
